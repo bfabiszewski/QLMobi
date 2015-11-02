@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		154727721BBD54D1001B2F76 /* QLMobi.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = 15DD6F681BA48FF400336FF5 /* QLMobi.qlgenerator */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1573312D1BE0E1D400455426 /* BAFHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = 1573312C1BE0E1D400455426 /* BAFHtml.m */; settings = {ASSET_TAGS = (); }; };
+		15ACCE401BE7639A0070C76F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ACCE3F1BE7639A0070C76F /* libz.tbd */; };
+		15ACCE421BE763A50070C76F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ACCE411BE763A50070C76F /* libxml2.tbd */; };
+		15ACCE441BE7F5750070C76F /* BAFMobiPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ACCE431BE7F5750070C76F /* BAFMobiPart.m */; settings = {ASSET_TAGS = (); }; };
+		15ACCE471BE7F7FA0070C76F /* BAFXpath.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ACCE461BE7F7FA0070C76F /* BAFXpath.m */; settings = {ASSET_TAGS = (); }; };
+		15DD6F6E1BA48FF400336FF5 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD6F6D1BA48FF400336FF5 /* GenerateThumbnailForURL.m */; };
+		15DD6F701BA48FF400336FF5 /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD6F6F1BA48FF400336FF5 /* GeneratePreviewForURL.m */; };
+		15DD6F721BA48FF400336FF5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 15DD6F711BA48FF400336FF5 /* main.c */; };
+		15DD6F791BA4B13D00336FF5 /* BAFMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD6F781BA4B13D00336FF5 /* BAFMobi.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		154727711BBD54CB001B2F76 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "~/Library/QuickLook";
+			dstSubfolderSpec = 0;
+			files = (
+				154727721BBD54D1001B2F76 /* QLMobi.qlgenerator in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1573312C1BE0E1D400455426 /* BAFHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFHtml.m; sourceTree = "<group>"; };
+		1573312E1BE0E20B00455426 /* BAFHtml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFHtml.h; sourceTree = "<group>"; };
+		15ACCE3B1BE761200070C76F /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		15ACCE3F1BE7639A0070C76F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		15ACCE411BE763A50070C76F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		15ACCE431BE7F5750070C76F /* BAFMobiPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFMobiPart.m; sourceTree = "<group>"; };
+		15ACCE451BE7F5A90070C76F /* BAFMobiPart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFMobiPart.h; sourceTree = "<group>"; };
+		15ACCE461BE7F7FA0070C76F /* BAFXpath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFXpath.m; sourceTree = "<group>"; };
+		15ACCE481BE7F8080070C76F /* BAFXpath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFXpath.h; sourceTree = "<group>"; };
+		15DD6F681BA48FF400336FF5 /* QLMobi.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLMobi.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		15DD6F6C1BA48FF400336FF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15DD6F6D1BA48FF400336FF5 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
+		15DD6F6F1BA48FF400336FF5 /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
+		15DD6F711BA48FF400336FF5 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		15DD6F781BA4B13D00336FF5 /* BAFMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFMobi.m; sourceTree = "<group>"; };
+		15DD6F7A1BA4B1B300336FF5 /* BAFMobi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFMobi.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15DD6F641BA48FF400336FF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15ACCE421BE763A50070C76F /* libxml2.tbd in Frameworks */,
+				15ACCE401BE7639A0070C76F /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15ACCE3A1BE7609F0070C76F /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				15ACCE3B1BE761200070C76F /* libxml2.2.tbd */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		15DD6F5E1BA48FF400336FF5 = {
+			isa = PBXGroup;
+			children = (
+				15ACCE411BE763A50070C76F /* libxml2.tbd */,
+				15ACCE3F1BE7639A0070C76F /* libz.tbd */,
+				15ACCE3A1BE7609F0070C76F /* libs */,
+				15DD6F6A1BA48FF400336FF5 /* QLMobi */,
+				15DD6F691BA48FF400336FF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15DD6F691BA48FF400336FF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15DD6F681BA48FF400336FF5 /* QLMobi.qlgenerator */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15DD6F6A1BA48FF400336FF5 /* QLMobi */ = {
+			isa = PBXGroup;
+			children = (
+				15DD6F6D1BA48FF400336FF5 /* GenerateThumbnailForURL.m */,
+				15DD6F6F1BA48FF400336FF5 /* GeneratePreviewForURL.m */,
+				15DD6F711BA48FF400336FF5 /* main.c */,
+				15DD6F7A1BA4B1B300336FF5 /* BAFMobi.h */,
+				15DD6F781BA4B13D00336FF5 /* BAFMobi.m */,
+				15ACCE451BE7F5A90070C76F /* BAFMobiPart.h */,
+				15ACCE431BE7F5750070C76F /* BAFMobiPart.m */,
+				1573312E1BE0E20B00455426 /* BAFHtml.h */,
+				1573312C1BE0E1D400455426 /* BAFHtml.m */,
+				15ACCE481BE7F8080070C76F /* BAFXpath.h */,
+				15ACCE461BE7F7FA0070C76F /* BAFXpath.m */,
+				15DD6F6B1BA48FF400336FF5 /* Supporting Files */,
+			);
+			path = QLMobi;
+			sourceTree = "<group>";
+		};
+		15DD6F6B1BA48FF400336FF5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15DD6F6C1BA48FF400336FF5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		15DD6F651BA48FF400336FF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		15DD6F671BA48FF400336FF5 /* QLMobi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15DD6F751BA48FF400336FF5 /* Build configuration list for PBXNativeTarget "QLMobi" */;
+			buildPhases = (
+				15DD6F631BA48FF400336FF5 /* Sources */,
+				15DD6F641BA48FF400336FF5 /* Frameworks */,
+				15DD6F651BA48FF400336FF5 /* Headers */,
+				15DD6F661BA48FF400336FF5 /* Resources */,
+				154727711BBD54CB001B2F76 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QLMobi;
+			productName = QLMobi;
+			productReference = 15DD6F681BA48FF400336FF5 /* QLMobi.qlgenerator */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15DD6F5F1BA48FF400336FF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Bartek;
+				TargetAttributes = {
+					15DD6F671BA48FF400336FF5 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 15DD6F621BA48FF400336FF5 /* Build configuration list for PBXProject "QLMobi" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 15DD6F5E1BA48FF400336FF5;
+			productRefGroup = 15DD6F691BA48FF400336FF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15DD6F671BA48FF400336FF5 /* QLMobi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15DD6F661BA48FF400336FF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15DD6F631BA48FF400336FF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15DD6F791BA4B13D00336FF5 /* BAFMobi.m in Sources */,
+				15ACCE441BE7F5750070C76F /* BAFMobiPart.m in Sources */,
+				1573312D1BE0E1D400455426 /* BAFHtml.m in Sources */,
+				15DD6F6E1BA48FF400336FF5 /* GenerateThumbnailForURL.m in Sources */,
+				15DD6F701BA48FF400336FF5 /* GeneratePreviewForURL.m in Sources */,
+				15DD6F721BA48FF400336FF5 /* main.c in Sources */,
+				15ACCE471BE7F7FA0070C76F /* BAFXpath.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		15DD6F731BA48FF400336FF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"MOBI_DEBUG=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"${SDKROOT}/usr/include/libxml2",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MOBI_DEBUG = "";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = /usr/local/lib/libmobi.a;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		15DD6F741BA48FF400336FF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"${SDKROOT}/usr/include/libxml2",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = /usr/local/lib/libmobi.a;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		15DD6F761BA48FF400336FF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = QLMobi/Info.plist;
+				INSTALL_PATH = /Library/QuickLook;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.fabiszewski.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = qlgenerator;
+			};
+			name = Debug;
+		};
+		15DD6F771BA48FF400336FF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = QLMobi/Info.plist;
+				INSTALL_PATH = /Library/QuickLook;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.fabiszewski.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = qlgenerator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15DD6F621BA48FF400336FF5 /* Build configuration list for PBXProject "QLMobi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15DD6F731BA48FF400336FF5 /* Debug */,
+				15DD6F741BA48FF400336FF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15DD6F751BA48FF400336FF5 /* Build configuration list for PBXNativeTarget "QLMobi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15DD6F761BA48FF400336FF5 /* Debug */,
+				15DD6F771BA48FF400336FF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15DD6F5F1BA48FF400336FF5 /* Project object */;
+}
