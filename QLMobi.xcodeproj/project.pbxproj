@@ -34,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		15502B011BE89AD100372AB3 /* debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		15502B021BE89FB000372AB3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1573312C1BE0E1D400455426 /* BAFHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFHtml.m; sourceTree = "<group>"; };
 		1573312E1BE0E20B00455426 /* BAFHtml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFHtml.h; sourceTree = "<group>"; };
 		15ACCE3F1BE7639A0070C76F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -114,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				15DD6F6C1BA48FF400336FF5 /* Info.plist */,
+				15502B021BE89FB000372AB3 /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
