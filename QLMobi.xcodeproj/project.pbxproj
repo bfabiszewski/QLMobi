@@ -33,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15502B011BE89AD100372AB3 /* debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
 		1573312C1BE0E1D400455426 /* BAFHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFHtml.m; sourceTree = "<group>"; };
 		1573312E1BE0E20B00455426 /* BAFHtml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFHtml.h; sourceTree = "<group>"; };
 		15ACCE3B1BE761200070C76F /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
@@ -105,6 +106,7 @@
 				1573312C1BE0E1D400455426 /* BAFHtml.m */,
 				15ACCE481BE7F8080070C76F /* BAFXpath.h */,
 				15ACCE461BE7F7FA0070C76F /* BAFXpath.m */,
+				15502B011BE89AD100372AB3 /* debug.h */,
 				15DD6F6B1BA48FF400336FF5 /* Supporting Files */,
 			);
 			path = QLMobi;

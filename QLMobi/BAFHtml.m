@@ -9,6 +9,7 @@
  */
 
 #import "BAFHtml.h"
+#import "debug.h"
 
 static volatile int32_t instancesCount = 0;
 
@@ -26,13 +27,13 @@ static volatile int32_t instancesCount = 0;
 @synthesize document, body, head;
 
 - (instancetype)init {
-    NSLog(@"HTML init (%li)", (long)instancesCount);
+    DebugLog(@"HTML init (%li)", (long)instancesCount);
     self = [super init];
     if (self) {
         static dispatch_once_t once;
         OSAtomicIncrement32(&instancesCount);
         dispatch_once(&once, ^{
-            NSLog(@"xmlInitParser()");
+            DebugLog(@"xmlInitParser()");
             xmlInitParser();
             LIBXML_TEST_VERSION
         });
@@ -78,15 +79,15 @@ static volatile int32_t instancesCount = 0;
 }
 
 - (void)dealloc {
-    NSLog(@"HTML dealloc (%li)", (long)instancesCount - 1);
+    DebugLog(@"HTML dealloc (%li)", (long)instancesCount - 1);
     /* Free the document */
     if (document) {
-        NSLog(@"xmlFreeDoc()");
+        DebugLog(@"xmlFreeDoc()");
         xmlFreeDoc(document);
     }
     OSAtomicDecrement32(&instancesCount);
     if (instancesCount == 0) {
-        NSLog(@"xmlCleanupParser()");
+        DebugLog(@"xmlCleanupParser()");
         xmlCleanupParser();
     }
 }
@@ -152,10 +153,12 @@ static volatile int32_t instancesCount = 0;
 }
 
 - (void)dumpDocumentToLog {
+#if defined(MOBI_DEBUG)
     xmlBufferPtr buffer = xmlBufferCreate();
     int bufSize = htmlNodeDump(buffer, document, body);
-    NSLog(@"Document size: %i", bufSize);
-    NSLog(@"Document content: %s", buffer->content);
+    DebugLog(@"Document size: %i", bufSize);
+    DebugLog(@"Document content: %s", buffer->content);
+#endif
 }
 
 - (NSData *)documentData {

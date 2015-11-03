@@ -13,6 +13,7 @@
 #import <libxml/HTMLtree.h>
 #import <mobi.h>
 #import "BAFMobi.h"
+#import "debug.h"
 
 /**
  Basic wrapper for libmobi
@@ -39,13 +40,13 @@
 @synthesize mData, mRawml;
 
 - (instancetype)init {
-    NSLog(@"Mobi init");
+    DebugLog(@"Mobi init");
     self = [super init];
     if (self) {
-        NSLog(@"mobi_init()");
+        DebugLog(@"mobi_init()");
         mData = mobi_init();
         if (mData == nil) {
-            NSLog(@"Memory allocation failed");
+            DebugLog(@"Memory allocation failed");
             return nil;
         }
         mRawml = nil;
@@ -54,13 +55,13 @@
 }
 
 - (void)dealloc {
-    NSLog(@"Mobi dealloc");
+    DebugLog(@"Mobi dealloc");
     if (mData) {
-        NSLog(@"mobi_free(mData)");
+        DebugLog(@"mobi_free(mData)");
         mobi_free(mData);
     }
     if (mRawml) {
-        NSLog(@"mobi_free(mRawml)");
+        DebugLog(@"mobi_free(mRawml)");
         mobi_free_rawml(mRawml);
     }
 }
@@ -78,11 +79,11 @@
 }
 
 - (void)load:(NSURL *)url {
-    NSLog(@"Loading file %@ (%@)", [url path], [NSThread currentThread]);
+    DebugLog(@"Loading file %@ (%@)", [url path], [NSThread currentThread]);
     // open file
     FILE *file = fopen([[url path] UTF8String], "rb");
     if (file == NULL) {
-        NSLog(@"Error opening file %@", [url path]);
+        DebugLog(@"Error opening file %@", [url path]);
         mobi_free(mData);
         mData = nil;
     }
@@ -90,7 +91,7 @@
     MOBI_RET mobi_ret = mobi_load_file(mData, file);
     fclose(file);
     if (mobi_ret != MOBI_SUCCESS) {
-        NSLog(@"Error loading file (%u)", mobi_ret);
+        DebugLog(@"Error loading file (%u)", mobi_ret);
         mobi_free(mData);
         mData = nil;
     }
@@ -100,16 +101,16 @@
     if (mData == nil) {
         return;
     }
-    NSLog(@"mobi_init_rawml()");
+    DebugLog(@"mobi_init_rawml()");
     mRawml = mobi_init_rawml(mData);
     if (mRawml == nil) {
-        NSLog(@"Memory allocation failed");
+        DebugLog(@"Memory allocation failed");
         return;
     }
     // parse mobi data into rawml structure
     MOBI_RET mobi_ret = mobi_parse_rawml_opt(mRawml, mData, NO, NO, NO);
     if (mobi_ret != MOBI_SUCCESS) {
-        NSLog(@"Error parsing file (%u)", mobi_ret);
+        DebugLog(@"Error parsing file (%u)", mobi_ret);
         mobi_free(mData);
         mobi_free_rawml(mRawml);
         mData = nil;

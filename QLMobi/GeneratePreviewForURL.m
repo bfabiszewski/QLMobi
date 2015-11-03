@@ -13,13 +13,10 @@
 #import <QuickLook/QuickLook.h>
 #import "BAFMobi.h"
 #import "BAFHtml.h"
+#import "debug.h"
 
 /** max size of parsed html */
 static const NSUInteger maxSize = (1024 * 1024);
-
-#if !defined(MOBI_DEBUG)
-#define NSLog(...)
-#endif
 
 /** Replace links to resources in html part with cid scheme and add resources as attachments */
 Status processHTML(BAFMobi *mobi, BAFHtml *partHTML, NSMutableDictionary *attachments, QLPreviewRequestRef preview) {
@@ -144,7 +141,7 @@ NSString *processCSS(BAFMobi *mobi, NSData *css, NSMutableDictionary *attachment
 OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
                                CFURLRef url, CFStringRef contentTypeUTI,
                                CFDictionaryRef options) {
-    NSLog(@"Starting QLMobi Preview Generator: %@", [NSThread currentThread]);
+    DebugLog(@"Starting QLMobi Preview Generator: %@", [NSThread currentThread]);
 #ifdef MOBI_DEBUG
     NSDate *startTime = [NSDate date];
 #endif
@@ -240,7 +237,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
 #ifdef MOBI_DEBUG
     NSDate *endTime = [NSDate date];
     NSTimeInterval executionTime = [endTime timeIntervalSinceDate:startTime];
-    NSLog(@"execution time: %f sec", executionTime);
+    DebugLog(@"execution time: %f sec", executionTime);
 #endif
     return noErr;
 }
