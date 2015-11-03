@@ -147,8 +147,8 @@
     }
     
     NSString *prefix = @"kindle:flow:";
-    if (link.length >= (prefix.length + EMBED_LENGTH) && [link hasPrefix:prefix]) {
-        NSRange needleRange = NSMakeRange(prefix.length, EMBED_LENGTH);
+    if (link.length >= (prefix.length + embedLinkLength) && [link hasPrefix:prefix]) {
+        NSRange needleRange = NSMakeRange(prefix.length, embedLinkLength);
         NSString *flowId = [link substringWithRange:needleRange];
         MOBIPart *flow = mobi_get_flow_by_fid(mRawml, [flowId UTF8String]);
         BAFMobiPart *part = [[BAFMobiPart alloc] initWithData:flow];
@@ -164,8 +164,8 @@
     }
     
     NSString *prefix = @"kindle:embed:";
-    if (link.length >= (prefix.length + EMBED_LENGTH) && [link hasPrefix:prefix]) {
-        NSRange needleRange = NSMakeRange(prefix.length, EMBED_LENGTH);
+    if (link.length >= (prefix.length + embedLinkLength) && [link hasPrefix:prefix]) {
+        NSRange needleRange = NSMakeRange(prefix.length, embedLinkLength);
         NSString *flowId = [link substringWithRange:needleRange];
         MOBIPart *flow = mobi_get_resource_by_fid(mRawml, [flowId UTF8String]);
         BAFMobiPart *part = [[BAFMobiPart alloc] initWithData:flow];

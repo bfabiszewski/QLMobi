@@ -15,7 +15,7 @@
 #import "BAFHtml.h"
 
 /** max size of parsed html */
-#define MOBI_MAXSIZE (1024 * 1024)
+static const NSUInteger maxSize = (1024 * 1024);
 
 #if !defined(MOBI_DEBUG)
 #define NSLog(...)
@@ -106,8 +106,8 @@ NSString *processCSS(BAFMobi *mobi, NSData *css, NSMutableDictionary *attachment
         @autoreleasepool {
             range = [str rangeOfString:pattern options:NSRegularExpressionSearch range:range];
             if (range.location != NSNotFound) {
-                if (range.location + EMBED_LENGTH < str.length) {
-                    NSRange targetRange = NSMakeRange(range.location, targetAttr.length + EMBED_LENGTH);
+                if (range.location + embedLinkLength < str.length) {
+                    NSRange targetRange = NSMakeRange(range.location, targetAttr.length + embedLinkLength);
                     NSString *linkTarget = [str substringWithRange:targetRange];
                     /** get resource part for given link target */
                     BAFMobiPart *media = [mobi partForLink:linkTarget];
@@ -162,18 +162,18 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     /** iterate main markup parts of the mobi document, usually html, also pdf */
     [mobi enumerateMarkupUsingBlock:^(BAFMobiPart *currentPart, BOOL *stop) {
         if ([currentPart isHTML]) {
-            NSUInteger partSize = ((size + currentPart.size) < MOBI_MAXSIZE) ? currentPart.size : (MOBI_MAXSIZE - size);
+            NSUInteger partSize = ((size + currentPart.size) < maxSize) ? currentPart.size : (maxSize - size);
             /** parse html part */
             BAFHtml *partHTML = [[BAFHtml alloc] initWithData:(char *)currentPart.rawData length:partSize];
             /** process links in parsed html */
             Status status = processHTML(mobi, partHTML, attachments, preview);
             if (status == SUCCESS) {
-                /** append parsed html to new document */
+                /** append body of the parsed html (renamed as div) to new document */
                 [document appendCopyToBody:partHTML.body asDiv:YES];
 
                 size += partSize;
                 /** exit loop if parsed html size is over quota */
-                if (size > MOBI_MAXSIZE) {
+                if (size > maxSize) {
                     *stop = YES;
                     return;
                 }

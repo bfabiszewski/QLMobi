@@ -12,7 +12,7 @@
 #define BAFMobi_h
 
 /** kindle:embed:xxxx target length */
-#define EMBED_LENGTH 4
+static const NSUInteger embedLinkLength = 4;
 
 #import <Foundation/Foundation.h>
 #import "BAFMobiPart.h"
