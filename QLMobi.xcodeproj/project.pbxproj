@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		154727721BBD54D1001B2F76 /* QLMobi.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = 15DD6F681BA48FF400336FF5 /* QLMobi.qlgenerator */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		15502B051BE8A94A00372AB3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 15502B041BE8A94A00372AB3 /* README.md */; settings = {ASSET_TAGS = (); }; };
 		1573312D1BE0E1D400455426 /* BAFHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = 1573312C1BE0E1D400455426 /* BAFHtml.m */; settings = {ASSET_TAGS = (); }; };
 		15ACCE401BE7639A0070C76F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ACCE3F1BE7639A0070C76F /* libz.tbd */; };
 		15ACCE421BE763A50070C76F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ACCE411BE763A50070C76F /* libxml2.tbd */; };
@@ -205,7 +204,6 @@
 				15DD6F6E1BA48FF400336FF5 /* GenerateThumbnailForURL.m in Sources */,
 				15DD6F701BA48FF400336FF5 /* GeneratePreviewForURL.m in Sources */,
 				15DD6F721BA48FF400336FF5 /* main.c in Sources */,
-				15502B051BE8A94A00372AB3 /* README.md in Sources */,
 				15ACCE471BE7F7FA0070C76F /* BAFXpath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
