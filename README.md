@@ -4,7 +4,8 @@ QLMobi plugin supports various ebook formats used on kindle readers. It is based
 
 ### Installation
 
-Place the plugin file: `QLMobi.qlgenerator` into `~/Library/QuickLook/` folder to install it for your account, or into `(Macintosh HD)/Library/QuickLook/` folder to install it for all users. If the folder does not exist, create it manually.  
+Place the plugin file: [QLMobi.qlgenerator][binary] into `~/Library/QuickLook/` folder to install it for your account, or into `(Macintosh HD)/Library/QuickLook/` folder to install it for all users. If the folder does not exist, create it manually.  
 
 [libmobi]: https://github.com/bfabiszewski/libmobi
+[binary]: https://github.com/bfabiszewski/QLMobi/releases/latest
 

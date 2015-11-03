@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		154727721BBD54D1001B2F76 /* QLMobi.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = 15DD6F681BA48FF400336FF5 /* QLMobi.qlgenerator */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		15502B051BE8A94A00372AB3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 15502B041BE8A94A00372AB3 /* README.md */; settings = {ASSET_TAGS = (); }; };
 		1573312D1BE0E1D400455426 /* BAFHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = 1573312C1BE0E1D400455426 /* BAFHtml.m */; settings = {ASSET_TAGS = (); }; };
 		15ACCE401BE7639A0070C76F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ACCE3F1BE7639A0070C76F /* libz.tbd */; };
 		15ACCE421BE763A50070C76F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ACCE411BE763A50070C76F /* libxml2.tbd */; };
@@ -34,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		15502B011BE89AD100372AB3 /* debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
-		15502B021BE89FB000372AB3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		15502B041BE8A94A00372AB3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		1573312C1BE0E1D400455426 /* BAFHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFHtml.m; sourceTree = "<group>"; };
 		1573312E1BE0E20B00455426 /* BAFHtml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFHtml.h; sourceTree = "<group>"; };
 		15ACCE3F1BE7639A0070C76F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -114,8 +115,8 @@
 		15DD6F6B1BA48FF400336FF5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				15502B041BE8A94A00372AB3 /* README.md */,
 				15DD6F6C1BA48FF400336FF5 /* Info.plist */,
-				15502B021BE89FB000372AB3 /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -204,6 +205,7 @@
 				15DD6F6E1BA48FF400336FF5 /* GenerateThumbnailForURL.m in Sources */,
 				15DD6F701BA48FF400336FF5 /* GeneratePreviewForURL.m in Sources */,
 				15DD6F721BA48FF400336FF5 /* main.c in Sources */,
+				15502B051BE8A94A00372AB3 /* README.md in Sources */,
 				15ACCE471BE7F7FA0070C76F /* BAFXpath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
