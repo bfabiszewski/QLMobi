@@ -13,6 +13,7 @@
 		15ACCE421BE763A50070C76F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ACCE411BE763A50070C76F /* libxml2.tbd */; };
 		15ACCE441BE7F5750070C76F /* BAFMobiPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ACCE431BE7F5750070C76F /* BAFMobiPart.m */; settings = {ASSET_TAGS = (); }; };
 		15ACCE471BE7F7FA0070C76F /* BAFXpath.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ACCE461BE7F7FA0070C76F /* BAFXpath.m */; settings = {ASSET_TAGS = (); }; };
+		15CDE37F1BEA1DED0009B93F /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 15CDE37E1BEA1DED0009B93F /* .travis.yml */; settings = {ASSET_TAGS = (); }; };
 		15DD6F6E1BA48FF400336FF5 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD6F6D1BA48FF400336FF5 /* GenerateThumbnailForURL.m */; };
 		15DD6F701BA48FF400336FF5 /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD6F6F1BA48FF400336FF5 /* GeneratePreviewForURL.m */; };
 		15DD6F721BA48FF400336FF5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 15DD6F711BA48FF400336FF5 /* main.c */; };
@@ -43,7 +44,7 @@
 		15ACCE451BE7F5A90070C76F /* BAFMobiPart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFMobiPart.h; sourceTree = "<group>"; };
 		15ACCE461BE7F7FA0070C76F /* BAFXpath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFXpath.m; sourceTree = "<group>"; };
 		15ACCE481BE7F8080070C76F /* BAFXpath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFXpath.h; sourceTree = "<group>"; };
-		15CDE37D1BEA16300009B93F /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		15CDE37E1BEA1DED0009B93F /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = SOURCE_ROOT; };
 		15DD6F681BA48FF400336FF5 /* QLMobi.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLMobi.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DD6F6C1BA48FF400336FF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15DD6F6D1BA48FF400336FF5 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
@@ -115,9 +116,9 @@
 		15DD6F6B1BA48FF400336FF5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				15CDE37E1BEA1DED0009B93F /* .travis.yml */,
 				15502B041BE8A94A00372AB3 /* README.md */,
 				15DD6F6C1BA48FF400336FF5 /* Info.plist */,
-				15CDE37D1BEA16300009B93F /* .travis.yml */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -190,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15CDE37F1BEA1DED0009B93F /* .travis.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
