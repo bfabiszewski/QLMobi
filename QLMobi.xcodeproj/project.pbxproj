@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		154727721BBD54D1001B2F76 /* QLMobi.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = 15DD6F681BA48FF400336FF5 /* QLMobi.qlgenerator */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1573312D1BE0E1D400455426 /* BAFHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = 1573312C1BE0E1D400455426 /* BAFHtml.m */; settings = {ASSET_TAGS = (); }; };
-		15ACCE401BE7639A0070C76F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ACCE3F1BE7639A0070C76F /* libz.tbd */; };
-		15ACCE421BE763A50070C76F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ACCE411BE763A50070C76F /* libxml2.tbd */; };
 		15ACCE441BE7F5750070C76F /* BAFMobiPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ACCE431BE7F5750070C76F /* BAFMobiPart.m */; settings = {ASSET_TAGS = (); }; };
 		15ACCE471BE7F7FA0070C76F /* BAFXpath.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ACCE461BE7F7FA0070C76F /* BAFXpath.m */; settings = {ASSET_TAGS = (); }; };
 		15CDE37F1BEA1DED0009B93F /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 15CDE37E1BEA1DED0009B93F /* .travis.yml */; settings = {ASSET_TAGS = (); }; };
@@ -38,8 +36,6 @@
 		15502B041BE8A94A00372AB3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		1573312C1BE0E1D400455426 /* BAFHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFHtml.m; sourceTree = "<group>"; };
 		1573312E1BE0E20B00455426 /* BAFHtml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFHtml.h; sourceTree = "<group>"; };
-		15ACCE3F1BE7639A0070C76F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		15ACCE411BE763A50070C76F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		15ACCE431BE7F5750070C76F /* BAFMobiPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFMobiPart.m; sourceTree = "<group>"; };
 		15ACCE451BE7F5A90070C76F /* BAFMobiPart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFMobiPart.h; sourceTree = "<group>"; };
 		15ACCE461BE7F7FA0070C76F /* BAFXpath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFXpath.m; sourceTree = "<group>"; };
@@ -59,8 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15ACCE421BE763A50070C76F /* libxml2.tbd in Frameworks */,
-				15ACCE401BE7639A0070C76F /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,8 +64,6 @@
 		15ACCE3A1BE7609F0070C76F /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				15ACCE411BE763A50070C76F /* libxml2.tbd */,
-				15ACCE3F1BE7639A0070C76F /* libz.tbd */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -266,7 +258,11 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = /usr/local/lib/libmobi.a;
+				OTHER_LDFLAGS = (
+					/usr/local/lib/libmobi.a,
+					"-lxml2",
+					"-lz",
+				);
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -314,7 +310,11 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = /usr/local/lib/libmobi.a;
+				OTHER_LDFLAGS = (
+					/usr/local/lib/libmobi.a,
+					"-lxml2",
+					"-lz",
+				);
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
