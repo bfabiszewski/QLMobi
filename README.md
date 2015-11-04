@@ -1,3 +1,5 @@
+[![Travis status](https://travis-ci.org/bfabiszewski/QLMobi.svg?branch=master)](https://travis-ci.org/bfabiszewski/QLMobi)
+
 ## Quick Look plugin for Kindle ebook formats
 
 QLMobi plugin supports various ebook formats used on kindle readers. It is based on [libmobi] and works with all the formats supported by the library: `prc`, `mobi`, `azw`, `azw3`, `azw4` and some `pdb` files. The plugin will generate a thumbnail, based on document embedded cover, and a preview for its content.
