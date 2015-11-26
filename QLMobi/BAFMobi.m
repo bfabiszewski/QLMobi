@@ -66,16 +66,22 @@
     }
 }
 
-- (instancetype)initWithURL:(NSURL *)url {
+- (instancetype)initWithURL:(NSURL *)url andParse:(BOOL)withParse {
     self = [self init];
     if (self) {
         [self load:(NSURL *)(url)];
-        [self parse];
+        if (withParse) {
+            [self parse];
+        }
         if (mData == nil) {
             return nil;
         }
     }
     return self;
+}
+
+- (instancetype)initWithURL:(NSURL *)url {
+    return [self initWithURL:url andParse:NO];
 }
 
 - (void)load:(NSURL *)url {
@@ -221,6 +227,28 @@
     return part;
 }
 
+- (NSData *)dataForCover;
+{
+    if (!mData) {
+        return nil;
+    }
+    NSData *data = nil;
+    MOBIPdbRecord *record = nil;
+    MOBIExthHeader *exth = mobi_get_exthrecord_by_tag(mData, EXTH_COVEROFFSET);
+    if (exth) {
+        NSUInteger offset = mobi_decode_exthvalue(exth->data, exth->size);
+        NSUInteger first_resource = mobi_get_first_resource_record(mData);
+        NSUInteger uid = first_resource + offset;
+        record = mobi_get_record_by_seqnumber(mData, uid);
+    }
+    if (record) {
+        data = [NSData dataWithBytesNoCopy:record->data
+                                    length:record->size
+                              freeWhenDone:NO];
+    }
+    return data;
+}
+
 
 - (void)enumerateMarkupUsingBlock:(void(^)(BAFMobiPart *curr, BOOL *stop))callback
 {
@@ -250,8 +278,7 @@
 }
 
 - (NSData *)coverData {
-    BAFMobiPart *part = [self partForCover];
-    return part.data;
+    return [self dataForCover];
 }
 
 - (NSString *)title {

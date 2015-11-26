@@ -25,6 +25,7 @@ typedef enum { SUCCESS, ERROR } Status;
 @interface BAFMobi : NSObject
 
 /** init with url */
+- (instancetype)initWithURL:(NSURL *)url andParse:(BOOL)withParse;
 - (instancetype)initWithURL:(NSURL *)url;
 /** get resource (part) for given link target */
 - (BAFMobiPart *)partForLink:(NSString *)link;

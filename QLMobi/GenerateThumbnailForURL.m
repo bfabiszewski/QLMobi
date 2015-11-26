@@ -18,6 +18,9 @@ OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thum
     @autoreleasepool {
         /** initialize mobi structure with contents of the url */
         BAFMobi *mobi = [[BAFMobi alloc] initWithURL:(__bridge NSURL *)url];
+        if (!mobi) {
+            return noErr;
+        }
         /** get cover */
         NSData *data = [mobi coverData];
         if (data) {

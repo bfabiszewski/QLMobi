@@ -146,7 +146,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     NSDate *startTime = [NSDate date];
 #endif
     /** initialze mobi structure with url */
-    BAFMobi *mobi = [[BAFMobi alloc] initWithURL:(__bridge NSURL *)url];
+    BAFMobi *mobi = [[BAFMobi alloc] initWithURL:(__bridge NSURL *)url andParse:YES];
     if (!mobi) {
         return noErr;
     }
