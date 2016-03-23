@@ -283,28 +283,20 @@
 
 - (NSString *)title {
     NSString *title = nil;
-    if (mobi_exists_mobiheader(mData)) {
-        if (mData->mh->full_name_offset && mData->mh->full_name_length) {
-            size_t len = *mData->mh->full_name_length;
-            char cTitle[len + 1];
-            if (mobi_get_fullname(mData, cTitle, len) == MOBI_SUCCESS &&
-                strlen(cTitle)) {
-                title = [[NSString alloc] initWithUTF8String:cTitle];
-            }
-        }
+    char *cTitle = mobi_meta_get_title(mData);
+    if (cTitle) {
+        title = [[NSString alloc] initWithUTF8String:cTitle];
+        free(cTitle);
     }
     return title;
 }
 
 - (NSString *)author {
     NSString *author = nil;
-    MOBIExthHeader *exth = mobi_get_exthrecord_by_tag(mData, EXTH_COVEROFFSET);
-    if (exth) {
-        char *cAuthor = mobi_decode_exthstring(mData, exth->data, exth->size);
-        if (cAuthor) {
-            author = [[NSString alloc] initWithUTF8String:cAuthor];
-            free(cAuthor);
-        }
+    char *cAuthor = mobi_meta_get_author(mData);    
+    if (cAuthor) {
+        author = [[NSString alloc] initWithUTF8String:cAuthor];
+        free(cAuthor);
     }
     return author;
 }
