@@ -22,7 +22,7 @@ Source code is available on [github][qlmobi]. It is bundled as an Xcode project 
  
 ### Changelog
 **0.4**  
-Hide images links in corrupt documents   
+Hide broken image links in corrupt documents   
 **0.3**  
 Minor changes to use improved libmobi metadata interface   
 Rebuilt with libmobi 0.3   
