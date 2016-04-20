@@ -21,6 +21,11 @@ Source code is available on [github][qlmobi]. It is bundled as an Xcode project 
 [qlmobi]: https://github.com/bfabiszewski/QLMobi
  
 ### Changelog
+**0.4**
+Hide images links in corrupt documents
+**0.3**
+Minor changes to use improved libmobi metadata interface
+Rebuilt with libmobi 0.3 
 **0.2**  
 Faster thumbnail generation  
 Thumbnails for encrypted documents  
