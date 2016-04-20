@@ -17,6 +17,10 @@
 
 /** max size of parsed html */
 static const NSUInteger maxSize = (1024 * 1024);
+/** empty gif */
+static const char emptyGif[] = { 0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x1, 0x0, 0x1, 0x0, 0x80, 0x0, 0x0, 0xff, 0xff, 0xff, 0x0, 0x0, 0x0, 0x2c, 0x0, 0x0, 0x0, 0x0, 0x1, 0x0, 0x1, 0x0, 0x0, 0x2, 0x2, 0x44, 0x1, 0x0, 0x3b };
+NSString *uid;
+
 
 /** Replace links to resources in html part with cid scheme and add resources as attachments */
 Status processHTML(BAFMobi *mobi, BAFHtml *partHTML, NSMutableDictionary *attachments, QLPreviewRequestRef preview) {
@@ -49,20 +53,27 @@ Status processHTML(BAFMobi *mobi, BAFHtml *partHTML, NSMutableDictionary *attach
             }
             /** get resource from mobi document for given link target */
             BAFMobiPart *media = [mobi partForLink:linkTarget];
-            if (!media) {
-                /** skip if resource is missing */
-                continue;
+            NSString *mime;
+            NSData *data;
+            if (media) {
+                mime = media.mime;
+                data = media.data;
+            } else {
+                mime = @"image/gif";
+                data = [NSData dataWithBytes:(const void *) emptyGif length:sizeof(emptyGif)];
             }
-            NSString *mime = media.mime;
-            NSData *data = media.data;
+            /** add unique id to prevent resource caching when preview window stays open */
+            linkTarget = [linkTarget stringByAppendingString:uid];
             /** prepend link target with cid scheme */
             NSString *stringValue = [NSString stringWithFormat:@"cid:%@", linkTarget];
             /** modify link target */
             [result setNodeChildContent:stringValue byIndex:i];
             /** add linked resource as attachment */
-            NSDictionary *attachment = @{(__bridge NSString *)kQLPreviewPropertyMIMETypeKey : mime,
-                                         (__bridge NSString *)kQLPreviewPropertyAttachmentDataKey : data};
-            attachments[linkTarget] = attachment;
+            if ([attachments objectForKey:linkTarget] == nil) {
+                NSDictionary *attachment = @{(__bridge NSString *)kQLPreviewPropertyMIMETypeKey : mime,
+                                             (__bridge NSString *)kQLPreviewPropertyAttachmentDataKey : data};
+                attachments[linkTarget] = attachment;
+            }
             
             if (QLPreviewRequestIsCancelled(preview)) {
                 /** exit loop if preview request was cancelled */
@@ -108,10 +119,19 @@ NSString *processCSS(BAFMobi *mobi, NSData *css, NSMutableDictionary *attachment
                     NSString *linkTarget = [str substringWithRange:targetRange];
                     /** get resource part for given link target */
                     BAFMobiPart *media = [mobi partForLink:linkTarget];
+                    NSString *mime;
+                    NSData *data;
                     if (media) {
-                        /** add linked resource part as attachment */
-                        NSString *mime = media.mime;
-                        NSData *data = media.data;
+                        mime = media.mime;
+                        data = media.data;
+                    } else {
+                        mime = @"image/gif";
+                        data = [NSData dataWithBytes:(const void *) emptyGif length:sizeof(emptyGif)];
+                    }
+                    /** add unique id to prevent resource caching when preview window stays open */
+                    linkTarget = [linkTarget stringByAppendingString:uid];
+                    /** add linked resource part as attachment */
+                    if ([attachments objectForKey:linkTarget] == nil) {
                         NSDictionary *attachment = @{(__bridge NSString *)kQLPreviewPropertyMIMETypeKey : mime,
                                                      (__bridge NSString *)kQLPreviewPropertyAttachmentDataKey : data};
                         attachments[linkTarget] = attachment;
@@ -145,6 +165,8 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
 #ifdef MOBI_DEBUG
     NSDate *startTime = [NSDate date];
 #endif
+    /** generate unique id */
+    uid = [[NSUUID UUID] UUIDString];
     /** initialze mobi structure with url */
     BAFMobi *mobi = [[BAFMobi alloc] initWithURL:(__bridge NSURL *)url andParse:YES];
     if (!mobi) {
@@ -213,6 +235,24 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
         NSString *customCss = @"body { padding: 20px 5% !important; } \n"
                               @"img { max-width: 95% !important; }";
         [document appendElementToHead:@"style" withValue:customCss];
+        /** add javascript to get rid of broken images in corrupt documents */
+        NSString *customJS = @"function isBroken(img) {"
+                             @"    if (typeof img.naturalWidth != 'undefined' && img.naturalWidth == 0) {"
+                             @"        return true;"
+                             @"    } "
+                             @"    return false;"
+                             @"}"
+                             @"window.addEventListener('load', function() {"
+                             @"    var maxcount = 100; var i = 0;"
+                             @"    while (i < maxcount) {"
+                             @"        var image = document.images[i++];"
+                             @"        if (typeof image == 'undefined') { break; }"
+                             @"        if (isBroken(image)) {"
+                             @"            image.style.visibility = 'hidden';"
+                             @"        }"
+                             @"    }"
+                             @"}, false);";
+        [document appendElementToHead:@"script" withValue:customJS];
         if ([mobi isKF8] == NO) {
             /** avoid images distorsion in old documents format */
             customCss = @"img { height: auto !important; width: auto !important; }";
