@@ -16,11 +16,19 @@ Source code is available on [github][qlmobi]. It is bundled as an Xcode project 
 ![Finder preview](http://www.mobileread.com/forums/attachment.php?attachmentid=143433&d=1446545022)
 ![Finder thubmnails](http://www.mobileread.com/forums/attachment.php?attachmentid=143432&d=1446545022)
 
-[libmobi]: https://github.com/bfabiszewski/libmobi
-[binary]: https://github.com/bfabiszewski/QLMobi/releases/latest
-[qlmobi]: https://github.com/bfabiszewski/QLMobi
+
+### Troubleshooting
  
+If the plugin doesn't work:
+- reload plugins running `qlmanage -r` from the console;  
+- try reinstalling the plugin;
+- try in the top level `Library` folder instead of the user's one;
+- go to github [issues] tab, start new issue describing your problem, you may also provide output of the command: `qlmanage -d 4 -p -o /tmp /path/to/your/test.mobi`.
+
 ### Changelog
+**0.5**  
+Minor workaround for plugin failing to register handled file types  
+Include minor fixes from current libmobi  
 **0.4**  
 Hide broken image links in corrupt documents   
 **0.3**  
@@ -37,4 +45,7 @@ Initial version
 Licensed under the [GNU Public License (GPL)](http://www.gnu.org/licenses/) version 3 or later.
 
 
-
+[libmobi]: https://github.com/bfabiszewski/libmobi
+[binary]: https://github.com/bfabiszewski/QLMobi/releases/latest
+[qlmobi]: https://github.com/bfabiszewski/QLMobi
+[issues]: https://github.com/bfabiszewski/QLMobi/issues
