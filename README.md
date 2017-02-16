@@ -6,6 +6,16 @@ QLMobi plugin supports various ebook formats used on kindle readers. It is based
 
 ### Installation
 
+#### Homebrew
+
+QLMobi can be installed via [Homebrew-Cask](https://github.com/caskroom/homebrew-cask).
+
+```bash
+brew cask install qlmobi
+```
+
+#### Manual
+
 Place the plugin file: [QLMobi.qlgenerator][binary] into `~/Library/QuickLook/` folder to install it for your account, or into `(Macintosh HD)/Library/QuickLook/` folder to install it for all users. If the folder does not exist, create it manually. 
 
 ### Building
