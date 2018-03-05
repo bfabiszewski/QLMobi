@@ -8,10 +8,11 @@
  * See <http://www.gnu.org/licenses/>
  */
 
+#import <stdatomic.h>
 #import "BAFHtml.h"
 #import "debug.h"
 
-static volatile int32_t instancesCount = 0;
+static atomic_int instancesCount = 0;
 
 @interface BAFHtml()
 
@@ -31,7 +32,7 @@ static volatile int32_t instancesCount = 0;
     self = [super init];
     if (self) {
         static dispatch_once_t once;
-        OSAtomicIncrement32(&instancesCount);
+        atomic_fetch_add_explicit(&instancesCount, 1, memory_order_relaxed);
         dispatch_once(&once, ^{
             DebugLog(@"xmlInitParser()");
             xmlInitParser();
@@ -85,7 +86,7 @@ static volatile int32_t instancesCount = 0;
         DebugLog(@"xmlFreeDoc()");
         xmlFreeDoc(document);
     }
-    OSAtomicDecrement32(&instancesCount);
+    atomic_fetch_sub_explicit(&instancesCount, 1, memory_order_relaxed);
     if (instancesCount == 0) {
         DebugLog(@"xmlCleanupParser()");
         xmlCleanupParser();
