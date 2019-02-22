@@ -1,4 +1,4 @@
-[![Travis status](https://travis-ci.org/bfabiszewski/QLMobi.svg?branch=master)](https://travis-ci.org/bfabiszewski/QLMobi)
+[![Travis status](https://travis-ci.com/bfabiszewski/QLMobi.svg?branch=master)](https://travis-ci.com/bfabiszewski/QLMobi)
 
 ## Quick Look plugin for Kindle ebook formats
 

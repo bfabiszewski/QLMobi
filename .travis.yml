@@ -11,6 +11,6 @@ before_install:
 - git clone https://github.com/bfabiszewski/libmobi.git
 - ( cd libmobi && ./autogen.sh && ./configure && make && sudo make install )
 - git config --global user.name "Travis CI (QLMobi)"
-- git config --global user.email $HOSTNAME":not-for-mail@travis-ci.org"
+- git config --global user.email $HOSTNAME":not-for-mail@travis-ci.com"
 script:
 - xcodebuild
