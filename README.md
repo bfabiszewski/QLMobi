@@ -35,6 +35,13 @@ If the plugin doesn't work:
 - try in the top level `Library` folder instead of the user's one;
 - go to github [issues] tab, start new issue describing your problem, you may also provide output of the command: `qlmanage -d 4 -p -o /tmp /path/to/your/test.mobi`.
 
+If you're on Catalina or later, and you get "QLMobi.qlgenerator cannot be opened because the developer cannot be verified", run in a terminal:
+
+```
+$ xattr -d -r com.apple.quarantine ~/Library/QuickLook/QLMobi.qlgenerator
+$ qlmanage -r
+```
+
 ### Changelog
 **0.5**  
 Minor workaround for plugin failing to register handled file types  
