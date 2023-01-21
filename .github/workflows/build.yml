@@ -18,6 +18,6 @@ jobs:
       - name: Fetch libmobi
         run: git clone https://github.com/bfabiszewski/libmobi.git
       - name: Build and install libmobi
-        run: ( cd libmobi && ./autogen.sh && ./configure && make && sudo make install )
+        run: ( cd libmobi && ./autogen.sh && ./configure CFLAGS="-arch x86_64 -arch arm64" && make && sudo make install )
       - name: Build QLMobi
         run: xcodebuild

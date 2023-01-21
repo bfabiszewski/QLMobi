@@ -1,4 +1,4 @@
-[![Travis status](https://travis-ci.com/bfabiszewski/QLMobi.svg?branch=master)](https://travis-ci.com/bfabiszewski/QLMobi)
+[![Github Action status](https://github.com/bfabiszewski/QLMobi/actions/workflows/build.yml/badge.svg)](https://github.com/bfabiszewski/QLMobi/actions)
 
 ## Quick Look plugin for Kindle ebook formats
 
