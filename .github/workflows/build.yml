@@ -1,0 +1,23 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install libmobi build dependencies
+        run: brew install autoconf automake libtool
+      - name: Fetch libmobi
+        run: git clone https://github.com/bfabiszewski/libmobi.git
+      - name: Build and install libmobi
+        run: ( cd libmobi && ./autogen.sh && ./configure && make && sudo make install )
+      - name: Build QLMobi
+        run: xcodebuild

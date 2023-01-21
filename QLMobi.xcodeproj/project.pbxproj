@@ -33,13 +33,13 @@
 /* Begin PBXFileReference section */
 		15502B011BE89AD100372AB3 /* debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
 		15502B041BE8A94A00372AB3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		155AF9BB297C4C1100B59D24 /* build.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = build.yml; path = .github/workflows/build.yml; sourceTree = SOURCE_ROOT; };
 		1573312C1BE0E1D400455426 /* BAFHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFHtml.m; sourceTree = "<group>"; };
 		1573312E1BE0E20B00455426 /* BAFHtml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFHtml.h; sourceTree = "<group>"; };
 		15ACCE431BE7F5750070C76F /* BAFMobiPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFMobiPart.m; sourceTree = "<group>"; };
 		15ACCE451BE7F5A90070C76F /* BAFMobiPart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFMobiPart.h; sourceTree = "<group>"; };
 		15ACCE461BE7F7FA0070C76F /* BAFXpath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFXpath.m; sourceTree = "<group>"; };
 		15ACCE481BE7F8080070C76F /* BAFXpath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFXpath.h; sourceTree = "<group>"; };
-		15CDE37E1BEA1DED0009B93F /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = SOURCE_ROOT; };
 		15DD6F681BA48FF400336FF5 /* QLMobi.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLMobi.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DD6F6C1BA48FF400336FF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15DD6F6D1BA48FF400336FF5 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		15DD6F6B1BA48FF400336FF5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				15CDE37E1BEA1DED0009B93F /* .travis.yml */,
+				155AF9BB297C4C1100B59D24 /* build.yml */,
 				15502B041BE8A94A00372AB3 /* README.md */,
 				15DD6F6C1BA48FF400336FF5 /* Info.plist */,
 			);
