@@ -43,6 +43,8 @@ $ qlmanage -r
 ```
 
 ### Changelog
+**0.6**
+Rebuilt with libmobi 0.11 and support for arm64 architecture (Apple M1)
 **0.5**  
 Minor workaround for plugin failing to register handled file types  
 Include minor fixes from current libmobi  
