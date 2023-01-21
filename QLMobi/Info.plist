@@ -12,12 +12,12 @@
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>net.fabiszewski.mobi</string>
-                                <string>dyn.ah62d4rv4ge80455cre</string><!-- ?0=6:1=mobi -->
-                                <string>dyn.ah62d4rv4ge80c8x1</string><!-- ?0=6:1=azw -->
-                                <string>dyn.ah62d4rv4ge80c8x1gq</string><!-- ?0=6:1=azw3 -->
-                                <string>dyn.ah62d4rv4ge80c8x1gu</string><!-- ?0=6:1=azw4 -->
-                                <string>dyn.ah62d4rv4ge81a6xd</string><!-- ?0=6:1=prc -->
-                                <string>dyn.ah62d4rv4ge81a3dc</string><!-- ?0=6:1=pdb -->
+				<string>dyn.ah62d4rv4ge80455cre</string><!-- ?0=6:1=mobi -->
+				<string>dyn.ah62d4rv4ge80c8x1</string><!-- ?0=6:1=azw -->
+				<string>dyn.ah62d4rv4ge80c8x1gq</string><!-- ?0=6:1=azw3 -->
+				<string>dyn.ah62d4rv4ge80c8x1gu</string><!-- ?0=6:1=azw4 -->
+				<string>dyn.ah62d4rv4ge81a6xd</string><!-- ?0=6:1=prc -->
+				<string>dyn.ah62d4rv4ge81a3dc</string><!-- ?0=6:1=pdb -->
 			</array>
 		</dict>
 	</array>
@@ -30,11 +30,11 @@
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.5</string>
+	<string>0.6</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>5</string>
+	<string>6</string>
 	<key>CFPlugInDynamicRegisterFunction</key>
 	<string></string>
 	<key>CFPlugInDynamicRegistration</key>
@@ -54,7 +54,7 @@
 	<key>CFPlugInUnloadFunction</key>
 	<string></string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2016 Bartek Fabiszewski. All rights reserved.</string>
+	<string>Copyright © 2023 Bartek Fabiszewski. All rights reserved.</string>
 	<key>QLNeedsToBeRunInMainThread</key>
 	<false/>
 	<key>QLPreviewHeight</key>
