@@ -11,7 +11,7 @@ QLMobi plugin supports various ebook formats used on kindle readers. It is based
 QLMobi can be installed via [Homebrew-Cask](https://github.com/caskroom/homebrew-cask).
 
 ```bash
-brew cask install qlmobi
+brew install --cask qlmobi
 ```
 
 #### Manual
